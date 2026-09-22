@@ -401,17 +401,6 @@ a:hover {
 
 main,
 header,
-footer,
-.container,
-.content,
-.hero,
-section {
-  position: relative;
-  z-index: 1;
-}
-
-main,
-header,
 footer {
   display: block;
   visibility: visible;
