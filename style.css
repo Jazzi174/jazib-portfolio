@@ -1,362 +1,400 @@
 
+
+/* ================================
+   MUHAMMAD JAZIB KHAN
+   MODERN DEVELOPER PORTFOLIO
+   ================================ */
+
+:root {
+  --bg: #081a33;
+  --bg-light: #0d2748;
+  --card: rgba(16, 45, 78, 0.72);
+  --card-border: rgba(120, 190, 255, 0.18);
+  --blue: #4da3ff;
+  --blue-light: #8bc7ff;
+  --text: #f4f8ff;
+  --muted: #a9bdd4;
+  --shadow: rgba(0, 0, 0, 0.25);
+}
+
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    background: #0a0a0f;
-    color: #f5f5f5;
-    line-height: 1.7;
-}
-
-header {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    background: rgba(10, 10, 15, 0.95);
-    border-bottom: 1px solid #22222c;
-    backdrop-filter: blur(10px);
-}
-
-nav {
-    max-width: 1100px;
-    margin: auto;
-    padding: 18px 25px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-nav h2 {
-    font-size: 22px;
-    color: #ffffff;
-}
-
-.nav-links {
-    display: flex;
-    gap: 22px;
-}
-
-.nav-links a {
-    color: #b8b8c5;
-    text-decoration: none;
-    font-size: 14px;
-    transition: 0.3s;
-}
-
-.nav-links a:hover {
-    color: #ffffff;
-}
-
-.hero {
-    min-height: 90vh;
-    display: flex;
-    align-items: center;
-    padding: 80px 25px;
-    background:
-        radial-gradient(circle at 80% 20%, #20204a 0%, transparent 35%),
-        #0a0a0f;
-}
-
-.hero-content {
-    max-width: 1100px;
-    width: 100%;
-    margin: auto;
-}
-
-.subtitle {
-    color: #8f8fff;
-    font-size: 13px;
-    letter-spacing: 3px;
-    margin-bottom: 20px;
-}
-
-.hero h1 {
-    font-size: clamp(48px, 9vw, 90px);
-    line-height: 1.05;
-    margin-bottom: 20px;
-}
-
-.hero h2 {
-    font-size: 25px;
-    font-weight: 400;
-    color: #bdbdcc;
-    margin-bottom: 20px;
-}
-
-.intro {
-    max-width: 650px;
-    color: #a9a9b6;
-    font-size: 18px;
-}
-
-.buttons {
-    display: flex;
-    gap: 15px;
-    margin-top: 35px;
-    flex-wrap: wrap;
-}
-
-.btn {
-    display: inline-block;
-    padding: 13px 22px;
-    border-radius: 8px;
-    text-decoration: none;
-    transition: 0.3s;
-}
-
-.primary {
-    background: #ffffff;
-    color: #0a0a0f;
-}
-
-.primary:hover {
-    transform: translateY(-3px);
-}
-
-.secondary {
-    border: 1px solid #444451;
-    color: #ffffff;
-}
-
-.secondary:hover {
-    background: #1b1b25;
-}
-
-section {
-    max-width: 1100px;
-    margin: auto;
-    padding: 100px 25px;
-}
-
-section > h2 {
-    font-size: 38px;
-    margin-bottom: 35px;
-}
-
-section p {
-    color: #b1b1bd;
-    margin-bottom: 20px;
-}
-
-.skills-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-    gap: 12px;
-}
-
-.skills-grid div {
-    background: #111119;
-    border: 1px solid #242430;
-    padding: 15px;
-    border-radius: 8px;
-    text-align: center;
-    color: #d8d8e2;
-    transition: 0.3s;
-}
-
-.skills-grid div:hover {
-    transform: translateY(-4px);
-    border-color: #6666aa;
-}
-
-.project-card,
-.experience-card,
-.education-card,
-.certifications-grid div {
-    background: #111119;
-    border: 1px solid #242430;
-    border-radius: 12px;
-    padding: 28px;
-    margin-bottom: 20px;
-    transition: 0.3s;
-}
-
-.project-card:hover,
-.experience-card:hover,
-.education-card:hover,
-.certifications-grid div:hover {
-    transform: translateY(-5px);
-    border-color: #555577;
-}
-
-.project-card h3,
-.experience-card h3,
-.education-card h3,
-.certifications-grid h3 {
-    margin-bottom: 8px;
-}
-
-.project-card span {
-    display: inline-block;
-    color: #9292c4;
-    font-size: 14px;
-    margin-top: 8px;
-}
-
-.experience-card h4,
-.education-card h4 {
-    color: #9292c4;
-    font-weight: 400;
-    margin-bottom: 5px;
-}
-
-.date {
-    font-size: 14px;
-    color: #77778a !important;
-}
-
-.certifications-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 18px;
-}
-
-.certifications-grid div {
-    margin-bottom: 0;
-}
-
-.certifications-grid p {
-    margin: 0;
-    color: #9292c4;
-}
-
-.contact-links {
-    display: flex;
-    gap: 15px;
-    flex-wrap: wrap;
-    margin: 30px 0;
-}
-
-.contact-links a {
-    padding: 12px 20px;
-    border: 1px solid #333340;
-    border-radius: 8px;
-    color: #ffffff;
-    text-decoration: none;
-    transition: 0.3s;
-}
-
-.contact-links a:hover {
-    background: #1b1b25;
-}
-
-footer {
-    text-align: center;
-    padding: 30px;
-    border-top: 1px solid #22222c;
-    color: #77778a;
-}
-
-@media (max-width: 700px) {
-
-    nav {
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    .nav-links {
-        gap: 12px;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .nav-links a {
-        font-size: 12px;
-    }
-
-    .hero {
-        min-height: 80vh;
-    }
-
-    section {
-        padding: 70px 20px;
-    }
-
-    section > h2 {
-        font-size: 30px;
-    }
-
-    .hero h1 {
-        font-size: 52px;
-    }
-
-}
-
-/* ===== MODERN ANIMATIONS ===== */
 
 html {
   scroll-behavior: smooth;
 }
 
-/* Fade sections in */
-section {
-  animation: fadeUp 0.8s ease both;
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background:
+    radial-gradient(circle at 15% 15%, rgba(42, 125, 220, 0.22), transparent 30%),
+    radial-gradient(circle at 85% 30%, rgba(30, 100, 190, 0.18), transparent 30%),
+    linear-gradient(135deg, #07172d, #0b2340 50%, #081a33);
+  background-attachment: fixed;
+  color: var(--text);
+  line-height: 1.7;
+  overflow-x: hidden;
 }
 
-@keyframes fadeUp {
+/* Animated background glow */
+
+body::before,
+body::after {
+  content: "";
+  position: fixed;
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  filter: blur(90px);
+  opacity: 0.18;
+  pointer-events: none;
+  z-index: -1;
+}
+
+body::before {
+  background: #268cff;
+  top: 10%;
+  left: -120px;
+  animation: floatingGlow 8s ease-in-out infinite alternate;
+}
+
+body::after {
+  background: #0066cc;
+  right: -120px;
+  bottom: 10%;
+  animation: floatingGlow 10s ease-in-out infinite alternate-reverse;
+}
+
+@keyframes floatingGlow {
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(60px);
+  }
+}
+
+/* ================================
+   NAVIGATION
+   ================================ */
+
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  background: rgba(6, 22, 43, 0.78);
+  border-bottom: 1px solid rgba(120, 190, 255, 0.12);
+}
+
+nav a {
+  color: var(--muted);
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+nav a:hover {
+  color: var(--blue-light);
+}
+
+/* ================================
+   GENERAL SECTIONS
+   ================================ */
+
+section {
+  position: relative;
+  padding: 90px 8%;
+  animation: sectionReveal 0.9s ease both;
+}
+
+@keyframes sectionReveal {
   from {
     opacity: 0;
-    transform: translateY(25px);
+    transform: translateY(30px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
   }
 }
 
-/* Button animation */
+h1,
+h2,
+h3 {
+  color: var(--text);
+}
+
+h2 {
+  margin-bottom: 30px;
+  font-size: 2.2rem;
+}
+
+p {
+  color: var(--muted);
+}
+
+/* ================================
+   HERO
+   ================================ */
+
+.hero {
+  min-height: 88vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(
+    circle,
+    rgba(55, 150, 255, 0.18),
+    transparent 70%
+  );
+  right: -150px;
+  top: 10%;
+  animation: heroGlow 7s ease-in-out infinite alternate;
+}
+
+@keyframes heroGlow {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(1.25);
+  }
+}
+
+.hero h1 {
+  font-size: clamp(3rem, 8vw, 6rem);
+  line-height: 1.05;
+  letter-spacing: -3px;
+  background: linear-gradient(
+    90deg,
+    #ffffff,
+    #8bc7ff,
+    #ffffff
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientText 5s linear infinite;
+}
+
+@keyframes gradientText {
+  to {
+    background-position: 200% center;
+  }
+}
+
+.hero h3 {
+  color: var(--blue-light);
+  font-weight: 500;
+  margin: 18px 0;
+}
+
+/* ================================
+   BUTTONS
+   ================================ */
+
 .btn {
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  display: inline-block;
+  padding: 12px 24px;
+  margin: 8px 8px 8px 0;
+  border-radius: 30px;
+  text-decoration: none;
+  color: white;
+  background: linear-gradient(135deg, #247ed0, #3ea4ff);
+  border: 1px solid rgba(139, 199, 255, 0.3);
+  box-shadow: 0 8px 25px rgba(0, 110, 220, 0.22);
+  transition: all 0.3s ease;
 }
 
 .btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 25px rgba(255, 255, 255, 0.12);
+  transform: translateY(-4px);
+  box-shadow: 0 14px 35px rgba(40, 145, 255, 0.35);
 }
 
-/* Card animation */
+.btn.secondary {
+  background: rgba(255, 255, 255, 0.06);
+}
+
+/* ================================
+   CARDS
+   ================================ */
+
 .card,
 .skill-card,
 .project-card,
 .experience-card {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: linear-gradient(
+    145deg,
+    rgba(22, 58, 96, 0.78),
+    rgba(10, 35, 62, 0.72)
+  );
+  border: 1px solid var(--card-border);
+  border-radius: 20px;
+  padding: 28px;
+  box-shadow: 0 15px 45px var(--shadow);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  transition: transform 0.35s ease, border-color 0.35s ease,
+    box-shadow 0.35s ease;
 }
 
 .card:hover,
 .skill-card:hover,
 .project-card:hover,
 .experience-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 15px 35px rgba(255, 255, 255, 0.08);
+  transform: translateY(-8px);
+  border-color: rgba(100, 185, 255, 0.5);
+  box-shadow: 0 20px 50px rgba(0, 90, 180, 0.2);
 }
 
-/* Navigation hover */
-nav a {
-  transition: color 0.25s ease, transform 0.25s ease;
+/* ================================
+   SKILLS
+   ================================ */
+
+.skill-card {
+  position: relative;
+  overflow: hidden;
 }
 
-nav a:hover {
-  transform: translateY(-2px);
+.skill-card::before {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background: rgba(60, 160, 255, 0.12);
+  border-radius: 50%;
+  right: -40px;
+  top: -40px;
 }
 
-/* Subtle glowing effect */
-.hero h1 {
-  animation: glowText 3s ease-in-out infinite alternate;
+/* ================================
+   PROJECTS
+   ================================ */
+
+.project-card {
+  position: relative;
+  overflow: hidden;
 }
 
-@keyframes glowText {
-  from {
-    text-shadow: 0 0 5px rgba(255, 255, 255, 0.05);
+.project-card::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 0;
+  left: 0;
+  bottom: 0;
+  background: linear-gradient(90deg, #328fe8, #8bc7ff);
+  transition: width 0.4s ease;
+}
+
+.project-card:hover::after {
+  width: 100%;
+}
+
+/* ================================
+   EXPERIENCE
+   ================================ */
+
+.experience-card {
+  margin-bottom: 24px;
+  border-left: 3px solid #348fe5;
+}
+
+/* ================================
+   LINKS
+   ================================ */
+
+a {
+  transition: 0.3s ease;
+}
+
+a:hover {
+  color: var(--blue-light);
+}
+
+/* ================================
+   SCROLLBAR
+   ================================ */
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #07172d;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #256da8;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3ea4ff;
+}
+
+/* ================================
+   MOBILE
+   ================================ */
+
+@media (max-width: 768px) {
+  section {
+    padding: 65px 6%;
   }
-  to {
-    text-shadow: 0 0 18px rgba(255, 255, 255, 0.18);
+
+  .hero {
+    min-height: 82vh;
+  }
+
+  .hero h1 {
+    font-size: 3.1rem;
+    letter-spacing: -1.5px;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+  }
+
+  .card,
+  .skill-card,
+  .project-card,
+  .experience-card {
+    padding: 22px;
+  }
+
+  body::before,
+  body::after {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+/* ================================
+   REDUCED MOTION
+   ================================ */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
   }
 }
