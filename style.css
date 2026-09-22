@@ -1,408 +1,75 @@
 
-
-/* ================================
-   MUHAMMAD JAZIB KHAN
-   MODERN DEVELOPER PORTFOLIO
-   ================================ */
-
-:root {
-  --bg: #081a33;
-  --bg-light: #0d2748;
-  --card: rgba(16, 45, 78, 0.72);
-  --card-border: rgba(120, 190, 255, 0.18);
-  --blue: #4da3ff;
-  --blue-light: #8bc7ff;
-  --text: #f4f8ff;
-  --muted: #a9bdd4;
-  --shadow: rgba(0, 0, 0, 0.25);
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
 }
+
+/* ===== MODERN ANIMATIONS ===== */
 
 html {
   scroll-behavior: smooth;
 }
 
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  background:
-    radial-gradient(circle at 15% 15%, rgba(42, 125, 220, 0.22), transparent 30%),
-    radial-gradient(circle at 85% 30%, rgba(30, 100, 190, 0.18), transparent 30%),
-    linear-gradient(135deg, #07172d, #0b2340 50%, #081a33);
-  background-attachment: fixed;
-  color: var(--text);
-  line-height: 1.7;
-  overflow-x: hidden;
-}
-
-/* Animated background glow */
-
-body::before,
-body::after {
-  content: "";
-  position: fixed;
-  width: 280px;
-  height: 280px;
-  border-radius: 50%;
-  filter: blur(90px);
-  opacity: 0.18;
-  pointer-events: none;
-  z-index: -1;
-}
-
-body::before {
-  background: #268cff;
-  top: 10%;
-  left: -120px;
-  animation: floatingGlow 8s ease-in-out infinite alternate;
-}
-
-body::after {
-  background: #0066cc;
-  right: -120px;
-  bottom: 10%;
-  animation: floatingGlow 10s ease-in-out infinite alternate-reverse;
-}
-
-@keyframes floatingGlow {
-  from {
-    transform: translateY(0);
-  }
-
-  to {
-    transform: translateY(60px);
-  }
-}
-
-/* ================================
-   NAVIGATION
-   ================================ */
-
-nav {
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  background: rgba(6, 22, 43, 0.78);
-  border-bottom: 1px solid rgba(120, 190, 255, 0.12);
-}
-
-nav a {
-  color: var(--muted);
-  text-decoration: none;
-  transition: 0.3s ease;
-}
-
-nav a:hover {
-  color: var(--blue-light);
-}
-
-/* ================================
-   GENERAL SECTIONS
-   ================================ */
-
+/* Fade sections in */
 section {
-  position: relative;
-  padding: 90px 8%;
-  animation: sectionReveal 0.9s ease both;
+  animation: fadeUp 0.8s ease both;
 }
 
-@keyframes sectionReveal {
+@keyframes fadeUp {
   from {
     opacity: 0;
-    transform: translateY(30px);
+    transform: translateY(25px);
   }
-
   to {
     opacity: 1;
     transform: translateY(0);
   }
 }
 
-h1,
-h2,
-h3 {
-  color: var(--text);
-}
-
-h2 {
-  margin-bottom: 30px;
-  font-size: 2.2rem;
-}
-
-p {
-  color: var(--muted);
-}
-
-/* ================================
-   HERO
-   ================================ */
-
-.hero {
-  min-height: 88vh;
-  display: flex;
-  align-items: center;
-  position: relative;
-  overflow: hidden;
-}
-
-.hero::before {
-  content: "";
-  position: absolute;
-  width: 500px;
-  height: 500px;
-  background: radial-gradient(
-    circle,
-    rgba(55, 150, 255, 0.18),
-    transparent 70%
-  );
-  right: -150px;
-  top: 10%;
-  animation: heroGlow 7s ease-in-out infinite alternate;
-}
-
-@keyframes heroGlow {
-  from {
-    transform: scale(1);
-  }
-
-  to {
-    transform: scale(1.25);
-  }
-}
-
-.hero h1 {
-  font-size: clamp(3rem, 8vw, 6rem);
-  line-height: 1.05;
-  letter-spacing: -3px;
-  background: linear-gradient(
-    90deg,
-    #ffffff,
-    #8bc7ff,
-    #ffffff
-  );
-  background-size: 200% auto;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: gradientText 5s linear infinite;
-}
-
-@keyframes gradientText {
-  to {
-    background-position: 200% center;
-  }
-}
-
-.hero h3 {
-  color: var(--blue-light);
-  font-weight: 500;
-  margin: 18px 0;
-}
-
-/* ================================
-   BUTTONS
-   ================================ */
-
+/* Button animation */
 .btn {
-  display: inline-block;
-  padding: 12px 24px;
-  margin: 8px 8px 8px 0;
-  border-radius: 30px;
-  text-decoration: none;
-  color: white;
-  background: linear-gradient(135deg, #247ed0, #3ea4ff);
-  border: 1px solid rgba(139, 199, 255, 0.3);
-  box-shadow: 0 8px 25px rgba(0, 110, 220, 0.22);
-  transition: all 0.3s ease;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .btn:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 14px 35px rgba(40, 145, 255, 0.35);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(255, 255, 255, 0.12);
 }
 
-.btn.secondary {
-  background: rgba(255, 255, 255, 0.06);
-}
-
-/* ================================
-   CARDS
-   ================================ */
-
+/* Card animation */
 .card,
 .skill-card,
 .project-card,
 .experience-card {
-  background: linear-gradient(
-    145deg,
-    rgba(22, 58, 96, 0.78),
-    rgba(10, 35, 62, 0.72)
-  );
-  border: 1px solid var(--card-border);
-  border-radius: 20px;
-  padding: 28px;
-  box-shadow: 0 15px 45px var(--shadow);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  transition: transform 0.35s ease, border-color 0.35s ease,
-    box-shadow 0.35s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card:hover,
 .skill-card:hover,
 .project-card:hover,
 .experience-card:hover {
-  transform: translateY(-8px);
-  border-color: rgba(100, 185, 255, 0.5);
-  box-shadow: 0 20px 50px rgba(0, 90, 180, 0.2);
+  transform: translateY(-6px);
+  box-shadow: 0 15px 35px rgba(255, 255, 255, 0.08);
 }
 
-/* ================================
-   SKILLS
-   ================================ */
-
-.skill-card {
-  position: relative;
-  overflow: hidden;
+/* Navigation hover */
+nav a {
+  transition: color 0.25s ease, transform 0.25s ease;
 }
 
-.skill-card::before {
-  content: "";
-  position: absolute;
-  width: 100px;
-  height: 100px;
-  background: rgba(60, 160, 255, 0.12);
-  border-radius: 50%;
-  right: -40px;
-  top: -40px;
+nav a:hover {
+  transform: translateY(-2px);
 }
 
-/* ================================
-   PROJECTS
-   ================================ */
-
-.project-card {
-  position: relative;
-  overflow: hidden;
+/* Subtle glowing effect */
+.hero h1 {
+  animation: glowText 3s ease-in-out infinite alternate;
 }
 
-.project-card::after {
-  content: "";
-  position: absolute;
-  height: 2px;
-  width: 0;
-  left: 0;
-  bottom: 0;
-  background: linear-gradient(90deg, #328fe8, #8bc7ff);
-  transition: width 0.4s ease;
-}
-
-.project-card:hover::after {
-  width: 100%;
-}
-
-/* ================================
-   EXPERIENCE
-   ================================ */
-
-.experience-card {
-  margin-bottom: 24px;
-  border-left: 3px solid #348fe5;
-}
-
-/* ================================
-   LINKS
-   ================================ */
-
-a {
-  transition: 0.3s ease;
-}
-
-a:hover {
-  color: var(--blue-light);
-}
-
-/* ================================
-   SCROLLBAR
-   ================================ */
-
-::-webkit-scrollbar {
-  width: 8px;
-}
-
-::-webkit-scrollbar-track {
-  background: #07172d;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #256da8;
-  border-radius: 10px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #3ea4ff;
-}
-
-/* ================================
-   MOBILE
-   ================================ */
-
-@media (max-width: 768px) {
-  section {
-    padding: 65px 6%;
+@keyframes glowText {
+  from {
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.05);
   }
-
-  .hero {
-    min-height: 82vh;
+  to {
+    text-shadow: 0 0 18px rgba(255, 255, 255, 0.18);
   }
-
-  .hero h1 {
-    font-size: 3.1rem;
-    letter-spacing: -1.5px;
-  }
-
-  h2 {
-    font-size: 1.8rem;
-  }
-
-  .card,
-  .skill-card,
-  .project-card,
-  .experience-card {
-    padding: 22px;
-  }
-
-  body::before,
-  body::after {
-    width: 200px;
-    height: 200px;
-  }
-}
-
-/* ================================
-   REDUCED MOTION
-   ================================ */
-
-@media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    scroll-behavior: auto !important;
-    transition-duration: 0.01ms !important;
-  }
-}
-
-main,
-header,
-footer {
-  display: block;
-  visibility: visible;
-  opacity: 1;
 }
